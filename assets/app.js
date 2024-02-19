@@ -8,6 +8,7 @@ form.addEventListener('submit', function(event){
 
 
 function addContent(){
+
     let firstName = document.getElementById("first-name").value.trim();
     let lastName = document.getElementById("last-name").value.trim();
     let message = document.getElementById("message").value.trim();
@@ -22,12 +23,15 @@ function addContent(){
         console.log('ok');
         console.log('formReset');
         errorMessage.style.display = "none";
+
 }};
 
 
 function createComment(firstName, lastName, message){
+
     let commentList = document.getElementById('comment-list');
     let newDiv = document.createElement('div');
+
     newDiv.innerHTML = `<div class="flex space-x-4 text-sm text-gray-500">
                             <div class="flex-1 py-10 border-t border-gray-200">
                                 <h3 class="font-medium text-gray-900">${firstName + " " + lastName}</h3>
@@ -37,8 +41,10 @@ function createComment(firstName, lastName, message){
                             </div>
                         </div>
     `;
+
     commentList.appendChild(newDiv);
     console.log ('firstName')
+    
 };
 
 
